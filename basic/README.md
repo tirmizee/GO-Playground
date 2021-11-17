@@ -1,4 +1,4 @@
-# GO-Playground
+# GO-Basic
 
 ### GO commands
 
