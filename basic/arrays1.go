@@ -14,7 +14,6 @@ func arraysStringDemo1()  {
 	fmt.Println(students[2])
 }
 
-
 func arraysStringDemo2() {
 	var students [3]string = [3]string {
 		"students a",
@@ -36,7 +35,6 @@ func arraysStringDemo3() {
 	fmt.Println(students[1])
 	fmt.Println(students[2])
 }
-
 
 func arraysStringDemo4() {
 	students := [3]string {
