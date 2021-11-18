@@ -10,7 +10,11 @@
 
 - go run main.go 
 
-- go build main.go
+- go run *.go or go run ./
+
+- go build main.go 
+
+- go build *.go or go build ./
 
 ### VS Code extension
 
