@@ -10,6 +10,8 @@
 
 - go run main.go 
 
+- go build main.go
+
 ### VS Code extension
 
 - Go (Rich Go language support for Visual Studio Code)
