@@ -2,9 +2,6 @@ package main
 
 import "fmt"
 
-
-// func with return 
-
 func funcWithReturnDemo() {
 
 	newText := newText()
@@ -15,6 +12,8 @@ func funcWithReturnDemo() {
 	fmt.Println(newNumber)
 	fmt.Println(isActive)
 }
+
+// func with return 
 
 func newText() string {
 	return "New Card"
@@ -29,17 +28,3 @@ func isActive() bool {
 }
 
 
-// func with parameter
-
-func funcWithParameterDemo()  {
-	fmt.Println(say("tirmizee"))
-	fmt.Println(add(5, 10))
-}
-
-func say(name string) string {
-	return "Hello " + name
-}
-
-func add(num1 int, num2 int) int {
-	return num1 + num2
-}
