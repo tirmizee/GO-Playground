@@ -6,7 +6,7 @@ type ListInt []int
 type ListBool []bool
 type ListString []string
 
-func demoType1()  {
+func demoType11()  {
 
 	numbers := ListInt{1,2,3,4}
 	fmt.Println(numbers)

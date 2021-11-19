@@ -6,26 +6,9 @@ import "fmt"
 
 func declareVariableDemo() {
 
-	var text string 
 	var number int
-	var number8 int8
-	var number16 int16
-	var isActive bool
-	var amount float64
-	
-	text = "String type"
 	number = 129
-	number8 = 127
-	number16 = -32768
-	isActive = true
-	amount = 20000.89
-
-	fmt.Println(text)
 	fmt.Println(number)
-	fmt.Println(number8)
-	fmt.Println(number16)
-	fmt.Println(isActive)
-	fmt.Println(amount)
 
 }
 
