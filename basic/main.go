@@ -3,5 +3,5 @@ package main
 import _ "fmt"
 
 func main() {
-	arraysStringDemo5()
+	demoType1()
 }
