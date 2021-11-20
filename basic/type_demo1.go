@@ -6,15 +6,36 @@ type ListInt []int
 type ListBool []bool
 type ListString []string
 
+func (l ListInt) Print() {
+	for _, n := range l {
+		fmt.Print(n, " ")
+	} 
+	fmt.Println()
+}
+
+func (l ListBool) Print() {
+	for _, n := range l {
+		fmt.Print(n, " ")
+	} 
+	fmt.Println()
+}
+
+func (l ListString) Print() {
+	for _, n := range l {
+		fmt.Print(n, " ")
+	} 
+	fmt.Println()
+}
+
 func demoType11()  {
 
 	numbers := ListInt{1,2,3,4}
-	fmt.Println(numbers)
+	numbers.Print()
 
 	var names = ListString{"Java", "Kotlin", "Go"}
-	fmt.Println(names)
+	names.Print()
 
 	var statuses ListBool = ListBool{true, false}
-	fmt.Println(statuses)
+	statuses.Print()
 
 }
