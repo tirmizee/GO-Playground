@@ -4,7 +4,7 @@ import "fmt"
 
 // operators
 
-func operatorsDemo()  {
+func operatorsDemo() {
 
 	const A = 34
 	const B = 27
