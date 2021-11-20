@@ -2,11 +2,9 @@ package main
 
 import "fmt"
 
-// declare variable with manual
-
 func declareMultiVariableDemo() {
 
-	var text, text2 string 
+	var text, text2 string
 	fmt.Println(text, text2)
 
 	var length, size = 10, 10

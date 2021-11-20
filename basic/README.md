@@ -14,7 +14,9 @@
 
 - go build main.go 
 
-- go build *.go or go build ./
+- go build *.go or go build ./ or go build -o execute  . 
+
+- go get -u github.com/eiannone/keyboard
 
 ### VS Code extension
 

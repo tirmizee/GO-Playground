@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-// arrays 
+// arrays
 
-func arraysStringDemo1()  {
+func arraysStringDemo1() {
 	var students [3]string
 	students[0] = "students1 a"
 	students[1] = "students b"
@@ -15,7 +15,7 @@ func arraysStringDemo1()  {
 }
 
 func arraysStringDemo2() {
-	var students [3]string = [3]string {
+	var students [3]string = [3]string{
 		"students a",
 		"students b",
 		"students c",
@@ -26,7 +26,7 @@ func arraysStringDemo2() {
 }
 
 func arraysStringDemo3() {
-	var students []string = []string {
+	var students []string = []string{
 		"students a",
 		"students b",
 		"students c",
@@ -37,7 +37,7 @@ func arraysStringDemo3() {
 }
 
 func arraysStringDemo4() {
-	students := [3]string {
+	students := [3]string{
 		"students a",
 		"students b",
 		"students c",
@@ -48,7 +48,7 @@ func arraysStringDemo4() {
 }
 
 func arraysStringDemo5() {
-	students := []string {
+	students := []string{
 		"students a",
 		"students b",
 		"students c",
@@ -63,5 +63,13 @@ func arraysStringDemo6() {
 	students[0] = "students a"
 	students[1] = "students b"
 	students[2] = "students c"
+	fmt.Println(students)
+}
+
+func arraysStringDemo7() {
+	students := []string{}
+	students = append(students, "students a")
+	students = append(students, "students b")
+	students = append(students, "students c")
 	fmt.Println(students)
 }

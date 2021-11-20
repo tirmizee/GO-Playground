@@ -1,27 +1,44 @@
 package main
 
-import _ "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-type Autentication interface {
-	authenticated(username string) bool
+type Shape interface {
+	area() float64
 }
 
-type Permanent struct {
-	username string
+type Circle struct {
+	x, y, radius float64
 }
 
-func (p Permanent) authenticated(username string) bool {
-	return p.username == "tir"
+type Rectangle struct {
+	width, height float64
 }
 
-type Outsource struct {
-	username string
+func (circle Circle) area() float64 {
+	return math.Pi * circle.radius * circle.radius
 }
 
-func (p Outsource) authenticated(username string) bool {
-	return p.username == "yee"
+func (rect Rectangle) area() float64 {
+	return rect.width * rect.height
 }
 
-func IsAuthenticated(username string, authen Autentication) bool {
-	return authen.authenticated(username)
+func getArea(shape Shape) float64 {
+	return shape.area()
+}
+
+func interfaceDemo1() {
+
+	circle := Circle{x: 0, y: 0, radius: 5}
+	rectangle := Rectangle{width: 10, height: 5}
+
+	fmt.Printf("Circle area: %f\n", getArea(circle))
+	fmt.Printf("Rectangle area: %f\n", getArea(rectangle))
+
+	shapeCircle := Circle{x: 0, y: 0, radius: 5}
+	shapeRectangle := Rectangle{width: 10, height: 5}
+	fmt.Printf("Circle area: %f\n", shapeCircle.area())
+	fmt.Printf("Rectangle area: %f\n", shapeRectangle.area())
 }
