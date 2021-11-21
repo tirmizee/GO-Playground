@@ -1,5 +1,5 @@
 package main
 
 func main() {
-	inputReader()
+	arraysStringDemo3()
 }
