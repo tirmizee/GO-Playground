@@ -17,6 +17,20 @@ func pointerDemo() {
 	fmt.Println("after pointer change")
 	*pointerNumber = 20
 	fmt.Println("number", number, &number)
-	fmt.Println("pointerNumber", *pointerNumber, pointerNumber)
+	fmt.Println("pointerNumber", *pointerNumber, &pointerNumber)
+
+}
+
+func pointerDemo2() {
+
+	x := 10
+	fmt.Println("x", x, &x)
+
+	y := x
+	fmt.Println("y", y, &y)
+
+	x = 20
+	fmt.Println("x", x)
+	fmt.Println("y", y)
 
 }

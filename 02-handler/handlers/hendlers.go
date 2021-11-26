@@ -21,6 +21,7 @@ func Product(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method == http.MethodPost {
+
 		var productRequest models.ProductRequest
 		decoder := json.NewDecoder(r.Body)
 		decoder.DisallowUnknownFields()
