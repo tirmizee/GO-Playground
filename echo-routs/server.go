@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"net/http"
 
 	"github.com/go-playground/validator/v10"
@@ -56,12 +55,9 @@ func HandlerGetPath(c echo.Context) error {
 
 func HandlerUserGet(c echo.Context) error {
 
-	defer c.Request().Body.Close()
-
 	userRequest := UserRequest{}
 
-	err := json.NewDecoder(c.Request().Body).Decode(&userRequest)
-	if err != nil {
+	if err := c.Bind(&userRequest); err != nil {
 		return err
 	}
 
