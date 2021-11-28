@@ -28,7 +28,9 @@ func main() {
 
 		random := strconv.Itoa(rand.Intn(100))
 		username, email := "tirmizee"+random, "tirmizee"+random+"@gmail"
-		query := `INSERT INTO public.accounts(username, "password", email, created_on) VALUES($1, $2, $3, $4)`
+		query := `
+			INSERT INTO public.accounts(username, "password", email, created_on) 
+			VALUES($1, $2, $3, $4)`
 		result, err := con.Exec(query, username, "pass", email, time.Now())
 		if err != nil {
 			fmt.Fprintf(w, "insert database err")
@@ -58,7 +60,14 @@ func main() {
 
 		defer con.Close()
 
-		rows, err := con.Query("select user_id, username, password, email, created_on from accounts")
+		rows, err := con.Query(`
+			select 
+				user_id, 
+				username, 
+				password, 
+				email, 
+				created_on 
+			from accounts`)
 
 		if err != nil {
 			fmt.Fprintf(w, err.Error())
